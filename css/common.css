@@ -80,8 +80,8 @@ body, ul, p, div{
     display: flex;
     width: 39.4375rem;
     height: 3.1875rem;
-    justify-content: flex-end;
-    align-items: flex-start;
+    justify-content: flex-end; /*x축*/
+    align-items: center; /*y축*/
     gap: 1.875rem;
     flex-shrink: 0;
 }
@@ -106,3 +106,28 @@ body, ul, p, div{
 .cs svg:hover path{
     fill: red;
 }
+
+/* .cart svg path{
+    fill: red;  
+    transition: 0.5s;
+}
+
+.cart svg:hover path{
+    fill: blue;
+} */
+
+.cart{
+    background-color: red;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.cart path{
+    fill: white;
+}
+
+.cart:hover{
+    background-color: #111;
+}
+
