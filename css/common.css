@@ -1,24 +1,108 @@
-/* 피그마의 라이브러리 공통클래스 만들어두었습니다.      */
-
+/* 피그마의 라이브러리 공통클래스 만들어두었습니다 */
 :root{
-    --baseColor : #333;
-    --activeColor  : #02AE74;
-    --pointColor : ##FF3D43;    
+    --basecolor : #333;
+    --activecolor : #02AE74;
+    --pointcolor : #FF3D43;
     --fontfamily : "Noto Sans KR";
 }
 
 body{
-    color: var(--baseColor);
+    color: var(--basecolor);
     /* 네비폰트 */
-    font-family: "Noto Sans KR";
+    font-family: var(--fontfamily);
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 600;
-    line-height: normal; /* 1.125rem */
+    line-height: normal;
     letter-spacing: -0.01125rem;
 }
-
 a{
-    color : var(--baseColor);
+    color: var(--basecolor);
     text-decoration: none;
+}
+li{ list-style: none;}
+body, ul, p, div{
+    margin: 0;
+    padding: 0;
+}
+
+/* 공통클래스 */
+.title{
+    color: #111;  
+    font-size: 2.25rem;   
+}
+.linkcss{   
+    font-size: 1.125rem;
+}
+
+.activeColor{
+    color : var(--activecolor)
+}
+.pointColor{
+    color:var(--pointcolor)
+}
+.activeColorBg{
+    background-color: var(--activecolor);
+}
+
+.container{
+    /* 내 자식의 레이아웃 
+       
+    */
+    display: flex;
+    width: 90rem;
+    margin: 0 auto;
+    /* height: 9.3125rem;  */
+    align-items: center;
+    gap: 1.875rem;
+    flex-shrink: 0;
+}
+.search{
+    width: 39.5625rem;
+    height: 5.1875rem;
+    flex-shrink: 0;
+}
+.search input{
+    display: block;
+    width: 39.5625rem;
+    height: 5.1875rem;
+    border-radius: 3.875rem;
+    border: 2px solid var(--pointcolor);
+    background: rgba(217, 217, 217, 0.00);
+}
+
+.utilmenu{
+    width: 39.4375rem;
+    height: 3.1875rem;
+    flex-shrink: 0;
+}
+.utilmenu ul{
+    display: flex;
+    width: 39.4375rem;
+    height: 3.1875rem;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 1.875rem;
+    flex-shrink: 0;
+}
+
+
+/* 클래스가 utilmenu안의 li태그중에서
+클래스가 m인거 찾아
+찾았으면 그 안의 두 번째 img태그 나타나지마 */
+.utilmenu li.m img:nth-child(2){
+    display:none
+}
+
+
+.utilmenu li.m:hover img:nth-child(2){
+    display:block
+}
+
+.utilmenu li.m:hover img:nth-child(1){
+    display:none
+}
+
+.cs svg:hover path{
+    fill: red;
 }
